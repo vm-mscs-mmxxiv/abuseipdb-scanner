@@ -1,0 +1,7 @@
+# Abuse IPDB
+
+This presumably must be simple app for get lists of IP Addresses from file passed as a
+parameter, check them against API of Abuseipdb site and depending on configuration
+either add this site to the list or not. 
+
+I must look into tools like suricata to automate ip filtering.
