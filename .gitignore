@@ -1,1 +1,5 @@
 .venv
+.env
+ipss
+src/__pycache__
+__pycache__

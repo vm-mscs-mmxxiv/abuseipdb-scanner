@@ -1,7 +1,24 @@
 # Abuse IPDB
 
-This presumably must be simple app for get lists of IP Addresses from file passed as a
-parameter, check them against API of Abuseipdb site and depending on configuration
-either add this site to the list or not. 
+Simple script to check list of IP Addresses against API of Abuseipdb.
+Addresses passed in a file, path to file is relative to script root directory.
+User must get API Key for Abudse IPDB more inforamation is on the site:
+[AbuseIPDB FAQ](https://www.abuseipdb.com/faq) question #5.
 
-I must look into tools like suricata to automate ip filtering.
+## Stack
+
+Python 3.13.1
+
+Dependency of `requests` issue a warning about OpenSSL library. Solution: use newer versioin of Python. More Info on this [on this stackoverflow thread](https://stackoverflow.com/questions/76187256/importerror-urllib3-v2-0-only-supports-openssl-1-1-1-currently-the-ssl-modu)
+
+## Setup
+
+- Setup virtual environment: `python -m venv .venv`
+- Check that virtual environment pointing to python's path: `which python` the path must be something like `.venv/bin/python3`
+- Install required libraries: `pip install -r requirements.txt`
+
+## Usage
+
+Go to project directory change into src directory run this command:     
+`python -m scanner.py -f <absolute path to file to process>`    
+Note: I haven't actually try to run programm from the root of the Project.
